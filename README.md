@@ -49,13 +49,13 @@ Global pooling (e.g., mean or max) is applied to produce a graph-level embedding
 A fully connected layer (MLP) maps this embedding to one of the three classes (CN, MCI, AD).
 ## 4. Evaluation
  The model will be evaluated using:
-Accuracy
+- Accuracy
 
 
-F1-Score (macro and per-class)
+- F1-Score (macro and per-class)
 
 
-Confusion Matrix
+- Confusion Matrix
 
 
 We will also compare results with a baseline model (MLP) and with the literature review on Alzheimer’s disease classification using rs-fMRI and brain functional networks in the article of (“Multi-label classification of Alzheimer's disease stages from resting-state fMRI-based correlation connectivity data and deep learning”)
