@@ -13,6 +13,8 @@ The motivation behind this project is to contribute, even in a small way, to the
 We will use the publicly available Alzheimer's Disease Neuroimaging Initiative (ADNI) dataset. For this project, we will focus on rs-fMRI scans.
 To simplify processing, we may use standard brain atlases (e.g., AAL atlas) to define brain regions as nodes.
 
+We will perform a stratified data split to ensure that each class (CN, MCI, AD) is proportionally represented in the training, validation, and test sets. We will use a 70-15-15 split or 5-fold stratified cross-validation depending on the final dataset size after preprocessing.
+
 ## 3. Methodology
 
 ### 3.1 Preprocessing of the rs-fMRI scans
@@ -47,6 +49,11 @@ Global pooling (e.g., mean or max) is applied to produce a graph-level embedding
 
 
 A fully connected layer (MLP) maps this embedding to one of the three classes (CN, MCI, AD).
+
+### 3.5 Tuning the model
+We will perform a grid search over key hyperparameters using the validation set. Parameters to be tuned include the number of GAT layers, hidden dimensions, learning rate, etc. Due to time and resource constraints, we will restrict the search to a few reasonable combinations.
+
+
 ## 4. Evaluation
  The model will be evaluated using:
 - Accuracy
@@ -57,8 +64,10 @@ A fully connected layer (MLP) maps this embedding to one of the three classes (C
 
 - Confusion Matrix
 
-
-We will also compare results with a baseline model (MLP) and with the literature review on Alzheimer’s disease classification using rs-fMRI and brain functional networks in the article of (“Multi-label classification of Alzheimer's disease stages from resting-state fMRI-based correlation connectivity data and deep learning”)
+### 4.1 Baselines
+*Machine Learning Baseline*: We will compare results with a machine learning baseline, using a Multilayer Perceptron (MLP).
+*Statistical Baseline*: To assess whether our GNN model achieves meaningful performance beyond trivial classifiers, we will use a Random Classifier.  
+*Literature Baseline*:  Finally, we will compare our results with the literature on Alzheimer’s disease classification using rs-fMRI and brain functional networks, in particular the article “Multi-label classification of Alzheimer's disease stages from resting-state fMRI-based correlation connectivity data and deep learning”, which serves as a performance benchmark for similar tasks using deep learning.
 
 ## Team Members:
 - **Lucía Cortés** - [https://github.com/luciacortes063](https://github.com/luciacortes063)
