@@ -59,9 +59,9 @@ We will perform a grid search over the number of GAT layers using the validation
 - Accuracy
 
 ### 4.1 Baselines
-*Simple Machine Learning Baseline*: We will compare results with a machine learning baseline, using a Multilayer Perceptron (MLP).
-*Statistical Baseline*: To assess whether our GNN model achieves meaningful performance beyond trivial classifiers, we will use a Random Classifier.  
-*Literature Baseline*:  Finally, we will compare our results with the literature on Alzheimer’s disease classification using rs-fMRI and brain functional networks, in particular the article “Multi-label classification of Alzheimer's disease stages from resting-state fMRI-based correlation connectivity data and deep learning”, which serves as a performance benchmark for similar tasks using deep learning.
+- *Simple Machine Learning Baseline*: We will compare results with a machine learning baseline, using a Multilayer Perceptron (MLP).
+- *Statistical Baseline*: To assess whether our GNN model achieves meaningful performance beyond trivial classifiers, we will use a Random Classifier.  
+- *Literature Baseline*:  Finally, we will compare our results with the literature on Alzheimer’s disease classification using rs-fMRI and brain functional networks, in particular the article “Multi-label classification of Alzheimer's disease stages from resting-state fMRI-based correlation connectivity data and deep learning”, which serves as a performance benchmark for similar tasks using deep learning.
 
 ## Team Members:
 - **Lucía Cortés** - [https://github.com/luciacortes063](https://github.com/luciacortes063)
